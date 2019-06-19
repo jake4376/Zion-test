@@ -4,17 +4,13 @@ import styled from 'styled-components';
 import get from 'lodash.get';
 
 import EmailIcon from "resources/icon-social-email.svg";
-import MessengerIcon from "resources/icon-social-messenger.svg";
 import TelegramIcon from "resources/icon-social-telegram.svg";
 import TwitterIcon from "resources/icon-social-twitter.svg";
-import WhatsappIcon from "resources/icon-social-whatsapp.svg";
 
 const Icons = {
-    messenger: MessengerIcon,
     email: EmailIcon,
     telegram: TelegramIcon,
     twitter: TwitterIcon,
-    whatsapp: WhatsappIcon
 }
 
 const Wrapper = styled.a`
@@ -26,8 +22,8 @@ const Wrapper = styled.a`
 `;
 
 const Icon = styled.img`
-  width: 78px;
-  height: 78px;
+  width: 60px;
+  height: 60px;
 `;
 
 export default (props) => {

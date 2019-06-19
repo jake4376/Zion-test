@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
                 <Credits />
                 <SocialIcons
                     refferalLink = "http://localhost:3000"
-                    sharePlatform={["messenger", "twitter", "whatsapp", "telegram", "email"]}
+                    sharePlatform={["twitter", "telegram", "email"]}
                 />
             </FooterWrapper>
         )

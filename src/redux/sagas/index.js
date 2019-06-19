@@ -6,5 +6,6 @@ import PhotosSaga from './photos';
 export default function* saga() {
   yield all([
     fork(UsersSaga),
+    fork(PhotosSaga)
   ]);
 }

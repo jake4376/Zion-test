@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ItemWrapper = styled.div`
-  padding: 16px;
+  padding: 10px;
   border-bottom: 1px solid #ececec;
   cursor: pointer;
   &.selected {
-    background-color: #f3f8ff;
+    background-color: #c2c467;
   }
   &:hover {
-    background-color: #f3f8ff;
+    background-color: #c3c578;
   }
   display: flex;
   flex-direction: row;
@@ -18,29 +18,29 @@ const ItemWrapper = styled.div`
 
 const Img = styled.img`
   box-sizing: border-box;
-  width: 48px;
-  height: 48px;
-  border: 3px solid white;
-  border-radius: 24px;
-  -webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.43);
-  -moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.43);
-  box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.43);
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.40);
+  -moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.40);
+  box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.40);
 `;
 
 const InfoContainer = styled.div`
-  margin-left: 16px;
+  margin-left: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 `;
 
 const Name = styled.a`
-  color: #e86ed0;
+  color: #f490c3;
 `;
 
 const Stats = styled.div`
   font-size: 0.8rem;
-  color: #b1e8ed;
+  color: #a409c5;
   margin-right: 20px;
 `;
 

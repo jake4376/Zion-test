@@ -15,47 +15,47 @@ const initialState = {
 
 export default handleActions(
   {
-    [actionTypes.UPDATE_SEARCH_FILTER]: (state, action) => 
+    [actionTypes.USERS_UPDATE]: (state, action) => 
       produce(state, draft => {
-        const { type, payload } = action;
-        draft.current_status = type;
-        draft.keyword = payload;
-        draft.results = [];
-        draft.current_page = 0;
-      }),
-    [actionTypes.REACH_END]: (state, action) =>
+      const { type, payload } = action;
+      draft.current_status = type;
+      draft.keyword = payload;
+      draft.results = [];
+      draft.current_page = 0;
+    }),
+    [actionTypes.USRES_END]: (state, action) =>
       produce(state, draft => {
-        const { type } = action;
-        draft.current_status = type;
-      }),
-    [actionTypes.FETCH_USERS]: (state, action) =>
+      const { type } = action;
+      draft.current_status = type;
+    }),
+    [actionTypes.USERS]: (state, action) =>
       produce(state, draft => {
-        const { type } = action;
-        draft.current_status = type;
-        draft.errors = null;
-      }),
-    [actionTypes.FETCH_USERS_SUCCESS]: (state, action) =>
+      const { type } = action;
+      draft.current_status = type;
+      draft.errors = null;
+    }),
+    [actionTypes.USERS_SUCCESS]: (state, action) =>
       produce(state, draft => {
-        const { type, payload: { results, current_page, total_pages, total } } = action;
-        draft.current_status = type;
-        draft.results = [...state.results, ...results];
-        draft.current_page = current_page;
-        draft.total_pages = total_pages;
-        draft.total = total;
-        draft.errors = null;
-      }),
-    [actionTypes.FETCH_USERS_FAILURE]: (state, action) =>
+      const { type, payload: { results, current_page, total_pages, total } } = action;
+      draft.current_status = type;
+      draft.results = [...state.results, ...results];
+      draft.current_page = current_page;
+      draft.total_pages = total_pages;
+      draft.total = total;
+      draft.errors = null;
+    }),
+    [actionTypes.USERS_FAILURE]: (state, action) =>
       produce(state, draft => {
-        const { type, payload } = action;
-        draft.currentStatus = type;
-        draft.error = payload;
-      }),
-    [actionTypes.USER_SELECTED]: (state, action) =>
+      const { type, payload } = action;
+      draft.currentStatus = type;
+      draft.error = payload;
+    }),
+    [actionTypes.USERS_SELECTED]: (state, action) =>
       produce(state, draft => {
-        const { type, payload } = action;
-        draft.currentStatus = type;
-        draft.selected_user = payload;
-      })
+      const { type, payload } = action;
+      draft.currentStatus = type;
+      draft.selected_user = payload;
+    })
   },
   initialState
 );

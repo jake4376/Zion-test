@@ -3,24 +3,24 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
 
-import { getUserResult } from 'redux/selectors';
+import { UserResult } from 'redux/selectors';
 import { UpdateSearchFilter, UserSelected, FetchUsers } from 'redux/actions/users';
 
 import Users from './Users';
 
 const UserListWrapper = styled.div`
     display: flex;
-    flex: 1.5;
+    flex: 1.3;
     height: 100%;
     flex-direction: column;
-    border-right: 1px solid #f3f8ff;
+    border-right: 1px solid #c2c590;
 `;
 
 const Input = styled.input`
-  margin: 16px;
-  padding: 8px;
-  border-radius: 2px;
-  border: 1px solid #c6cfff;
+  margin: 20px;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #59031a;
 `;
 
 class UserList extends React.Component {
@@ -28,6 +28,7 @@ class UserList extends React.Component {
         const keyword = event.target.value;
         this.props.UpdateSearchFilter(keyword);
     }
+
     onSelect = (user) => {
         this.props.UserSelected(user);
     }
@@ -38,7 +39,6 @@ class UserList extends React.Component {
 
     render () {
         const { results, status, selected } = this.props;
-        console.log(results);
         return (
             <UserListWrapper>
                 <Input type="text" onChange={this.onChangeKeyword} placeholder="Search user..." />
@@ -55,7 +55,7 @@ class UserList extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    ...getUserResult(state),
+    ...UserResult(state),
     selected: state.users.selected_user,
     status: state.users.current_status,
 });

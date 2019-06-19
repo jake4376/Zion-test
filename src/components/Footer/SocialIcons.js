@@ -6,26 +6,16 @@ import get from 'lodash.get';
 import SocialButtons from './SocialButtons';
 
 const platformInfo = {
-    messenger: {
-      icon: 'messenger',
-      title: 'Messenger',
-      buildLink: (link) => `fb-messenger://share/?link=${encodeURI(link)}`,
+    twitter: {
+      icon: 'twitter',
+      title: 'Twitter',
+      buildLink: (link) => `http://twitter.com/share?text=Great+Demo&url=${link}`,
     },
     email: {
       icon: 'email',
       title: 'Email',
       buildLink: (link) =>
         `mailto:email@address.com?subject=Great+Demo&body=Try it out! ${link}`,
-    },
-    twitter: {
-      icon: 'twitter',
-      title: 'Twitter',
-      buildLink: (link) => `http://twitter.com/share?text=Great+Demo&url=${link}`,
-    },
-    whatsapp: {
-      icon: 'whatsapp',
-      title: 'Whatsapp',
-      buildLink: (link) => `whatsapp://send?text=${link}`,
     },
     telegram: {
       icon: 'telegram',
@@ -47,7 +37,7 @@ export default ( props ) => {
     return (
         <Wrapper>
             {sharePlatform.map((val, index) => {
-                const info = get(platformInfo, val, platformInfo.messenger);
+                const info = get(platformInfo, val, platformInfo.twitter);
                 return <SocialButtons refferalLink={refferalLink} {...info} key={`shareItem_${index}`} />;
             })}
         </Wrapper>
