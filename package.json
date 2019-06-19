@@ -17,7 +17,8 @@
     "redux-saga": "^1.0.3",
     "reselect": "^4.0.0",
     "styled-components": "^4.3.1",
-    "unsplash": "^4.2.0"
+    "unsplash": "^4.2.0",
+    "unsplash-js": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

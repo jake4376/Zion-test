@@ -6,7 +6,7 @@ export const getSelectedUserName = state => get(state.users, 'selected_user.user
 
 export const getSelectedUserInfo = state => get(state.users, 'selected_user', null);
 
-export const getUserList = state => ({
+export const getUserResult = state => ({
     results: state.users.results,
     total: state.users.total,
     totalPages: state.users.total_pages,
